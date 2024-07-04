@@ -1,282 +1,146 @@
-/**********************************************************************************************************************/
-/******************************************Sri lanka Real water bill Calculator****************************************/
-/*********************************************************************************************************************/
-/****************************************  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*********************************/
-/***********************************    $$$$$$$$$    SPECIAL JAVA PROJECT   $$$$$$$$$$$$       ******************** **/
-/***************************        $$$$$$$$$                                         $$$$$$$$$       ******************/
-/***************************          $$$$$$$$$   RAJARATA UNIVERSITY OF SRI LANKA  $$$$$$$$$        ******************/
-/***************************           $$$$$$$$$  Name:-H.M.L.PRABHATH MUNASINGHE  $$$$$$$$$         ******************/
-/***************************             $$$$$$$$$                                $$$$$$$$$          ******************/
-/***************************                $$$$$$$$$                           $$$$$$$$$             ******************/
-/***************************                 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$               ******************/
-/***************************                                                                         ******************/
-/**********************************************************************************************************************/
-/**********************************************************************************************************************/
-/**********************************************************************************************************************/
-/**********************************************************************************************************************/
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
- 
+public class WaterBillCalculator {
 
-/************************************Sri lanka Real water bill Calculator********************************/
+    public static void main(String[] args) {
+        // Create the main frame
+        JFrame frame = new JFrame("Sri Lanka Real Water Bill Calculator");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 300);
+        
+        // Create the panel to hold components
+        JPanel panel = new JPanel();
+        frame.add(panel);
+        placeComponents(panel);
+        
+        // Set frame visibility
+        frame.setVisible(true);
+    }
 
-import java.util.Scanner; 
-public class prabhath
-{
-  public static void main(String[] args) 
-		{
-	
-				Scanner q = new Scanner(System.in);
-				
-				
-				
-				
-				System.out.println("");
-				System.out.println("");
-				System.out.println("");
-				System.out.println("************************Welcome*********************");
-				System.out.println("****************************************************");
-				System.out.println("********Sri lanka Real water bill Calculator********");
-				System.out.println("****************************************************");
-				System.out.println("********************Prabhath Creators****************");
-				System.out.println("****************************************************");
-				
-				int  go = 1;
-		do
-		{
-				
-				
-				
-				System.out.print("Enter past reading     = ");
-				int past = q.nextInt();
-				System.out.println("");
-				
-				System.out.print("Enter Current reading  = ");
-				int current = q.nextInt();
-				System.out.println("");
-				
-				int unit = (current-past);
-				
-				
-				System.out.println("");
-	
-	
-	
-	
-				{
-					if(unit<=5)
-					{	
-						int Price=12*unit;
-						System.out.println(" Water bill before tax = " + Price);
-						System.out.println(" Tax                   = " + "12%");
-						int vat=(Price*12/100);
-						int Total = Price + vat;
-						System.out.println("");	
-						System.out.println("");
-						System.out.println("                           ______");
-						System.out.println(" Water bill after tax  = " +"Rs. "+ Total );
-						System.out.println("                           ======");
-						every();
-					}
-					
-					else if((unit>=6) && (unit<=10))
-					{
-						int a =  (5*12);
-						int Price=(16*(unit-5))+a;
-						System.out.println(" Water bill before tax = " + Price);
-						System.out.println(" Tax                   = " + "12%");
-						int vat=(Price*12/100);
-						int Total = Price + vat;
-						System.out.println("");
-						System.out.println("");
-						System.out.println("                           ______");
-						System.out.println(" Water bill after tax  = " + "Rs. "+ Total );
-						System.out.println("                           ======");
-						every();
-						
-					}
-					
-					else if((unit>=11) && (unit<=15))
-					{
-						int a =  (5*12);
-						int b =  (5*16);
-						int Price=(20*(unit-10))+a+b;
-						System.out.println(" Water bill before tax = " + Price);
-						System.out.println(" Tax                   = " + "12%");
-						int vat=(Price*12/100);
-						int Total = Price + vat;
-						System.out.println("");
-						System.out.println("");
-						System.out.println("                           ______");
-						System.out.println(" Water bill after tax  = " + "Rs. "+ Total );
-						System.out.println("                           ======");
-						every();
-					}
-					
-					else if((unit>=16) && (unit<=20))
-					{
-						int a =  (5*12);
-						int b =  (5*16);
-						int c =  (5*20);
-						int Price=(40*(unit-15))+a+b+c;
-						System.out.println(" Water bill before tax = " + Price);
-						System.out.println(" Tax                   = " + "12%");
-						int vat=(Price*12/100);
-						int Total = Price + vat;
-						System.out.println("");
-						System.out.println("");
-						System.out.println("                           ______");
-						System.out.println(" Water bill after tax  = " +"Rs. "+  Total );
-						System.out.println("                           ======");
-						every();
-					}
-					
-					else if((unit>=21) && (unit<=25))
-					{
-						int a =  (5*12);
-						int b =  (5*16);
-						int c =  (5*20);
-						int d =  (5*40);
-						int Price=(58*(unit-20))+a+b+c+d;
-						System.out.println(" Water bill before tax = " + Price);
-						System.out.println(" Tax                   = " + "12%");
-						int vat=(Price*12/100);
-						int Total = Price + vat;
-						System.out.println("");
-						System.out.println("");
-						System.out.println("                           ______");
-						System.out.println(" Water bill after tax  = " +"Rs. "+  Total );
-						System.out.println("                           ======");
-						every();
-					}
-					else if((unit>=26) && (unit<=30))
-					{
-						int a =  (5*12);
-						int b =  (5*16);
-						int c =  (5*20);
-						int d =  (5*40);
-						int e =  (5*58);
-						int Price=(88*(unit-25))+a+b+c+d+e;
-						System.out.println(" Water bill before tax = " + Price);
-						System.out.println(" Tax                   = " + "12%");
-						int vat=(Price*12/100);
-						int Total = Price + vat;
-						System.out.println("");
-						System.out.println("");
-						System.out.println("                           ______");
-						System.out.println(" Water bill after tax  = " + "Rs. "+ Total );
-						System.out.println("                           ======");
-						every();
-					}
-					else if((unit>=31) && (unit<=40))
-					{
-						int a =  (5*12);
-						int b =  (5*16);
-						int c =  (5*20);
-						int d =  (5*40);
-						int e =  (5*58);
-						int f =  (5*88);
-						int Price=(105*(unit-30))+a+b+c+d+e+f;
-						System.out.println(" Water bill before tax = " + Price);
-						System.out.println(" Tax                   = " + "12%");
-						int vat=(Price*12/100);
-						int Total = Price + vat;
-						System.out.println("");
-						System.out.println("");
-						System.out.println("                           ______");
-						System.out.println(" Water bill after tax  = " + "Rs. "+ Total );
-						System.out.println("                           ======");
-						every();
-					}
-					else if((unit>=41) && (unit<=50))
-					{
-						int a =  (5*12);
-						int b =  (5*16);
-						int c =  (5*20);
-						int d =  (5*40);
-						int e =  (5*58);
-						int f =  (5*88);
-						int g =  (10*105);
-						int Price=(120*(unit-40))+a+b+c+d+e+f+g;
-						System.out.println(" Water bill before tax = " + Price);
-						System.out.println(" Tax                   = " + "12%");
-						int vat=(Price*12/100);
-						int Total = Price + vat;
-						System.out.println("");
-						System.out.println("");
-						System.out.println("                           ______");
-						System.out.println(" Water bill after tax  = " + "Rs. "+ Total );
-						System.out.println("                           ======");
-						every();
-					}
-					else if((unit>=51) && (unit<=75))
-					{
-						int a =  (5*12);
-						int b =  (5*16);
-						int c =  (5*20);
-						int d =  (5*40);
-						int e =  (5*58);
-						int f =  (5*88);
-						int g =  (10*105);
-						int h =  (10*120);
-						int Price=(130*(unit-50))+a+b+c+d+e+f+g+h;
-						System.out.println(" Water bill before tax = " + Price);
-						System.out.println(" Tax                   = " + "12%");
-						int vat=(Price*12/100);
-						int Total = Price + vat;
-						System.out.println("");
-						System.out.println("");
-						System.out.println("                           ______");
-						System.out.println(" Water bill after tax  = " + "Rs. "+ Total );
-						System.out.println("                           ======");
-						every();
-					}
-					else if (unit>=76) 
-					{
-						int a =  (5*12);
-						int b =  (5*16);
-						int c =  (5*20);
-						int d =  (5*40);
-						int e =  (5*58);
-						int f =  (5*88);
-						int g =  (10*105);
-						int h =  (10*120);
-						int i =  (25*130);
-						int Price=(140*(unit-75))+a+b+c+d+e+f+g+h+i;
-						System.out.println(" Water bill before tax = " + Price);
-						System.out.println(" Tax                   = " + "12%");
-						int vat=(Price*12/100);
-						int Total = Price + vat;
-						System.out.println("");
-						System.out.println("");
-						System.out.println("                           ______");
-						System.out.println(" Water bill after tax  = " + "Rs. "+ Total );
-						System.out.println("                           ======");
-						every();
-					}
-				}
-			
-			System.out.print("If you want to calculate another bill press 1= ");
-			System.out.print("If you want to exit press 2= ");
-			Scanner lost = new Scanner(System.in);
-			go = lost.nextInt();
-			System.out.println("");
-			}	
-			while(go<2);
-			
-		   }
-			public static void every()
-			{
-				System.out.println("");	
-				System.out.println("");	
-				System.out.println("______________Successfully Calculated_______________");
-				System.out.println("****************************************************");
-				System.out.println("__________Sri lanka Real water bill Calculator______");
-				System.out.println("****************************************************");
-				System.out.println("________________Prabath Creators____________________");
-				System.out.println("****************************************************");
-				System.out.println("_____________Thank You & Come Again!________________");
-				System.out.println("****************************************************");
-				System.out.println("");
-				System.out.println("");	
-			}		
+    private static void placeComponents(JPanel panel) {
+        panel.setLayout(null);
+
+        // Label for units
+        JLabel userLabel = new JLabel("Enter water units consumed:");
+        userLabel.setBounds(10, 20, 200, 25);
+        panel.add(userLabel);
+
+        // Text field for units
+        JTextField unitsText = new JTextField(20);
+        unitsText.setBounds(220, 20, 165, 25);
+        panel.add(unitsText);
+
+        // Button to calculate
+        JButton calculateButton = new JButton("Calculate Bill");
+        calculateButton.setBounds(10, 80, 150, 25);
+        panel.add(calculateButton);
+
+        // Area to display the result
+        JTextArea resultArea = new JTextArea();
+        resultArea.setBounds(10, 120, 375, 150);
+        panel.add(resultArea);
+
+        // Action listener for the button
+        calculateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    int unit = Integer.parseInt(unitsText.getText());
+                    String result = calculateBill(unit);
+                    resultArea.setText(result);
+                } catch (NumberFormatException ex) {
+                    resultArea.setText("Please enter a valid number.");
+                }
+            }
+        });
+    }
+
+    private static String calculateBill(int unit) {
+        int Price;
+        int a, b, c, d, e, f, g, h, i;
+
+        if(unit <= 5) {
+            Price = unit * 12;
+        } else if(unit <= 10) {
+            a = 5 * 12;
+            b = (unit - 5) * 16;
+            Price = a + b;
+        } else if(unit <= 15) {
+            a = 5 * 12;
+            b = 5 * 16;
+            c = (unit - 10) * 20;
+            Price = a + b + c;
+        } else if(unit <= 20) {
+            a = 5 * 12;
+            b = 5 * 16;
+            c = 5 * 20;
+            d = (unit - 15) * 40;
+            Price = a + b + c + d;
+        } else if(unit <= 25) {
+            a = 5 * 12;
+            b = 5 * 16;
+            c = 5 * 20;
+            d = 5 * 40;
+            e = (unit - 20) * 58;
+            Price = a + b + c + d + e;
+        } else if(unit <= 30) {
+            a = 5 * 12;
+            b = 5 * 16;
+            c = 5 * 20;
+            d = 5 * 40;
+            e = 5 * 58;
+            f = (unit - 25) * 88;
+            Price = a + b + c + d + e + f;
+        } else if(unit <= 40) {
+            a = 5 * 12;
+            b = 5 * 16;
+            c = 5 * 20;
+            d = 5 * 40;
+            e = 5 * 58;
+            f = 5 * 88;
+            g = (unit - 30) * 105;
+            Price = a + b + c + d + e + f + g;
+        } else if(unit <= 50) {
+            a = 5 * 12;
+            b = 5 * 16;
+            c = 5 * 20;
+            d = 5 * 40;
+            e = 5 * 58;
+            f = 5 * 88;
+            g = 10 * 105;
+            h = (unit - 40) * 120;
+            Price = a + b + c + d + e + f + g + h;
+        } else if(unit <= 75) {
+            a = 5 * 12;
+            b = 5 * 16;
+            c = 5 * 20;
+            d = 5 * 40;
+            e = 5 * 58;
+            f = 5 * 88;
+            g = 10 * 105;
+            h = 10 * 120;
+            i = (unit - 50) * 130;
+            Price = a + b + c + d + e + f + g + h + i;
+        } else {
+            a = 5 * 12;
+            b = 5 * 16;
+            c = 5 * 20;
+            d = 5 * 40;
+            e = 5 * 58;
+            f = 5 * 88;
+            g = 10 * 105;
+            h = 10 * 120;
+            i = 25 * 130;
+            Price = (140 * (unit - 75)) + a + b + c + d + e + f + g + h + i;
+        }
+
+        int vat = (Price * 12 / 100);
+        int Total = Price + vat;
+
+        return "Water bill before tax = Rs. " + Price + "\n" +
+               "Tax = 12%\n" +
+               "Water bill after tax = Rs. " + Total;
+    }
 }
